@@ -1,0 +1,33 @@
+.header {
+    width: 100%;
+    padding: 10px 30px;
+    background-color: var(--accent-color-1);
+    border-radius: 200px;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 10%;
+    height: auto;
+}
+
+.navBar{
+    width: 100%;
+    gap: 10px;
+}
+
+.navElement {
+    padding: 8px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    gap: 5px;
+    transition: all 0.3s ease-in;
+}
+
+.navElement:hover{
+    background-color: var(--accent-color-3);
+}
+
+.navElement img {
+    height: 1.5vh;
+}

@@ -1,0 +1,37 @@
+.rightSection{
+    width: 100%;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.doctorPng{
+    height: 5vh;
+}
+
+.doctorDetails{
+    padding-right: 10px;
+    border-right: 1px solid var(--accent-color-2);
+}
+
+.name, .title {
+    font-size: 14px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.title {
+    color: var(--accent-color-2);
+}
+
+.settingsSection {
+    /* background-color: red; */
+    gap: 10px;
+}
+
+.settings, .moreVert {
+    height: 2vh;
+    width: auto;
+}
+
