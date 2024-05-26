@@ -1,5 +1,9 @@
-.details {
+.rightSection{
     width: 29%;
+    height: 100%;
+}
+
+.details {
     height: 100%;
 }
 
@@ -20,7 +24,6 @@
 }
 
 .info {
-    /* background-color: red; */
     padding: 20px;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -51,4 +54,31 @@
     padding: 10px 20px;
     border-radius: 50px;
     cursor: pointer;
+}
+
+.labResults{
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.resultsList {
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.resultElement{
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.resultElement:hover {
+    background-color: var(--hover-color);
 }
