@@ -1,16 +1,22 @@
-.rightSection{
+/* Base styles for larger screens (desktops) */
+.rightSection {
     width: 100%;
+    display: flex; /* Ensure flexbox layout */
     gap: 10px;
     justify-content: space-evenly;
+    align-items: center; /* Center items vertically */
 }
 
-.doctorPng{
+.doctorPng {
     height: 5vh;
 }
 
-.doctorDetails{
+.doctorDetails {
     padding-right: 10px;
     border-right: 1px solid var(--accent-color-2);
+    display: flex; /* Ensure flexbox layout */
+    flex-direction: column; /* Stack name and title vertically */
+    justify-content: center; /* Center items vertically */
 }
 
 .name, .title {
@@ -26,8 +32,9 @@
 }
 
 .settingsSection {
-    /* background-color: red; */
+    display: flex; /* Ensure flexbox layout */
     gap: 10px;
+    align-items: center; /* Center items vertically */
 }
 
 .settings, .moreVert {
@@ -39,3 +46,37 @@
     cursor: pointer;
 }
 
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .rightSection {
+        flex-direction: column; /* Stack elements vertically on tablets */
+        gap: 8px; /* Adjust gap for tablets */
+    }
+
+    .doctorPng {
+        height: 4vh; /* Adjust image height for tablets */
+    }
+
+    .doctorDetails {
+        padding-right: 8px; /* Adjust padding for tablets */
+    }
+
+    .name, .title {
+        font-size: 12px; /* Reduce font size for tablets */
+    }
+
+    .settingsSection {
+        gap: 8px; /* Adjust gap for tablets */
+    }
+
+    .settings, .moreVert {
+        height: 1.5vh; /* Adjust icon height for tablets */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .rightSection, .doctorPng, .doctorDetails, .settingsSection, .settings, .moreVert {
+        display: none;
+    }
+}

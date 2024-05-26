@@ -1,6 +1,8 @@
+import classes from './DefaultPage.module.css'
+
 const DefaultPage = () => {
   return (
-    <div>
+    <div className={classes.defaultPage}>
         This is the default page!
     </div>
   )

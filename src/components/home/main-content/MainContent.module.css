@@ -1,7 +1,26 @@
-.mainContent{
-    /* background-color: red; */
+/* Base styles for larger screens (desktops) */
+.mainContent {
     margin-top: 20px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .mainContent {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center items horizontally */
+        justify-content: center;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .mainContent {
+        margin-top: 10px;       /* Reduce top margin for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center items horizontally */
+        justify-content: center;
+    }
 }

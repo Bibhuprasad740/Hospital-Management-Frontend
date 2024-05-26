@@ -1,14 +1,15 @@
-.patient{
+/* Base styles for larger screens (desktops) */
+.patient {
     padding: 15px 10px;
     gap: 10px;
     cursor: pointer;
 }
 
-.patient:hover{
+.patient:hover {
     background-color: var(--accent-color-4);
 }
 
-.patient img{
+.patient img {
     height: 5vh;
 }
 
@@ -20,4 +21,33 @@
 .details {
     color: var(--accent-color-2);
     font-size: 12px;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .patient {
+        padding: 12px 8px;
+        /* Reduce padding for tablets */
+        gap: 8px;
+        /* Reduce gap between items for tablets */
+    }
+
+    .patient img {
+        height: 6vh;
+        /* Slightly increase image height for better visibility */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .patient {
+        /* Further reduce padding for mobile devices */
+        gap: 5px;
+        /* Further reduce gap between items for mobile devices */
+    }
+
+    .patient img {
+        height: 7vh;
+        /* Increase image height for better visibility on small screens */
+    }
 }
