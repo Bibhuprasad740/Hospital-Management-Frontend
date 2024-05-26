@@ -1,4 +1,81 @@
-.history{
+.history {
     width: 69%;
-    height: 84vh;
+    overflow-y: scroll;
+    height: 100%;
 }
+
+.header {
+    margin: 20px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.chart{
+    background-color: var(--graph-background);
+    margin: 20px;
+    border-radius: 10px;
+    height: 50%;
+
+}
+
+.lineGraph {
+    padding: 20px;
+    width: 70%;
+    height: 100%;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+.graphDetails {
+    width: 30%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.dataElement {
+    margin: 20px 0;
+    height: 30%;
+    justify-content: space-evenly;
+}
+
+.dataElement img {
+    height: 0.7vh;
+    margin-right: 5px;
+}
+
+.feedback {
+    font-size: 14px;
+}
+
+.detailsHeader{
+    gap: 10px;
+}
+
+.detailsHeader p{
+    font-weight: bold;
+}
+
+.color1, .color2 {
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.color1 {
+    background-color: var(--systolic-color);
+}
+
+.color2 {
+    background-color: var(--diastolic-color);
+}
+
+.value {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.divider {
+    height: 1px;
+    width: 50%;
+    background-color: var(--accent-color-2);
+}
+

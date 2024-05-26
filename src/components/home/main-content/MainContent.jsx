@@ -4,7 +4,7 @@ import SideBar from './side-bar/SideBar'
 
 const MainContent = () => {
     return (
-        <div className={`${classes.mainContent} flex-row`}>
+        <div className={`${classes.mainContent}`}>
             <SideBar />
             <Outlet />
         </div>

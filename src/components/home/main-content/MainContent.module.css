@@ -1,5 +1,7 @@
 .mainContent{
     /* background-color: red; */
     margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
 }

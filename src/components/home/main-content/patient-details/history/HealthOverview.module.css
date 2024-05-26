@@ -1,0 +1,50 @@
+.healthOverview {
+    height: 40%;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    align-items: flex-start;
+    width: 32%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container img {
+    height: 15vh;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.container p{
+    margin: 5px 0;
+}
+
+.title{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.value {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.status{
+    font-size: 14px;
+}
+
+.one {
+    background-color: var(--respiratory-rate-background);
+}
+
+.two {
+    background-color: var(--temperature-background);
+}
+
+.three {
+    background-color: var(--heart-rate-background);
+}
