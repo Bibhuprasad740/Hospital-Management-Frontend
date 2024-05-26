@@ -1,18 +1,20 @@
-.history {
+.historyPage {
     width: 69%;
-    overflow-y: scroll;
     height: 100%;
 }
 
+.history {
+    padding: 20px;
+}
+
 .header {
-    margin: 20px;
     font-weight: bold;
     font-size: 25px;
 }
 
 .chart{
     background-color: var(--graph-background);
-    margin: 20px;
+    margin: 20px 0;
     border-radius: 10px;
     height: 50%;
 
@@ -77,5 +79,42 @@
     height: 1px;
     width: 50%;
     background-color: var(--accent-color-2);
+}
+
+/* ============LIST============== */
+
+.list {
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--accent-color-1);
+}
+
+.tableHeaders {
+    margin: 20px 0;
+    background-color: #F6F7F8;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.tableHeaders p{
+    font-weight: bold;
+}
+
+.diagnosis {
+    width: 30%;
+}
+
+.description {
+    width: 50%;
+}
+
+.status {
+    width: 10%;
+}
+
+.tableRows {
+    border-bottom: 1px solid rgb(229, 229, 229);
+    padding: 20px;
 }
 

@@ -62,50 +62,84 @@ const History = () => {
             }
         }
     }
+
+    const diagnosisList = DUMMY_DATA[0].diagnostic_list;
     return (
-        <div className={`${classes.history} card`}>
-            <p className={classes.header}>Diagnosis History</p>
+        <div className={`${classes.historyPage} flex-col`}>
+            <div className={`${classes.history} card`}>
+                <p className={classes.header}>Diagnosis History</p>
 
-            {/* chart and the details */}
-            <div className={`${classes.chart} flex-row`}>
-                {/* chart */}
-                <div className={`${classes.lineGraph}`}>
-                    <Line data={data} options={options} />
-                </div>
-
-                {/* details */}
-                <div className={`${classes.graphDetails}`}>
-                    <div className={`${classes.dataElement} flex-col`}>
-                        <div className={`${classes.detailsHeader} flex-row`}>
-                            <div className={classes.color1}></div>
-                            <p>Systolic</p>
-                        </div>
-                        <p className={classes.value}>{diagnosisHistory[0].blood_pressure.systolic.value}</p>
-                        <div className='flex-row'>
-                            <img src={diagnosisHistory[0].blood_pressure.systolic.value > 120 ? arrowUp : arrowDown} alt="" />
-                            <p className={classes.feedback} >{diagnosisHistory[0].blood_pressure.systolic.value > 120 ? 'Higher Than Average' : 'Lower Than Average'}</p>
-                        </div>
+                {/* chart and the details */}
+                <div className={`${classes.chart} flex-row`}>
+                    {/* chart */}
+                    <div className={`${classes.lineGraph}`}>
+                        <Line data={data} options={options} />
                     </div>
 
-                    <div className={classes.divider}></div>
-
-                    <div className={`${classes.dataElement} flex-col`}>
-                        <div className={`${classes.detailsHeader} flex-row`}>
-                            <div className={classes.color2}></div>
-                            <p>Diastolic</p>
+                    {/* details */}
+                    <div className={`${classes.graphDetails}`}>
+                        <div className={`${classes.dataElement} flex-col`}>
+                            <div className={`${classes.detailsHeader} flex-row`}>
+                                <div className={classes.color1}></div>
+                                <p>Systolic</p>
+                            </div>
+                            <p className={classes.value}>{diagnosisHistory[0].blood_pressure.systolic.value}</p>
+                            <div className='flex-row'>
+                                <img src={diagnosisHistory[0].blood_pressure.systolic.value > 120 ? arrowUp : arrowDown} alt="" />
+                                <p className={classes.feedback} >{diagnosisHistory[0].blood_pressure.systolic.value > 120 ? 'Higher Than Average' : 'Lower Than Average'}</p>
+                            </div>
                         </div>
-                        <p className={classes.value}>{diagnosisHistory[0].blood_pressure.diastolic.value}</p>
-                        <div className='flex-row'>
-                            <img src={diagnosisHistory[0].blood_pressure.diastolic.value > 80 ? arrowUp : arrowDown} alt="" />
-                            <p className={classes.feedback}>{diagnosisHistory[0].blood_pressure.diastolic.value > 120 ? 'Higher Than Average' : 'Lower Than Average'}</p>
+
+                        <div className={classes.divider}></div>
+
+                        <div className={`${classes.dataElement} flex-col`}>
+                            <div className={`${classes.detailsHeader} flex-row`}>
+                                <div className={classes.color2}></div>
+                                <p>Diastolic</p>
+                            </div>
+                            <p className={classes.value}>{diagnosisHistory[0].blood_pressure.diastolic.value}</p>
+                            <div className='flex-row'>
+                                <img src={diagnosisHistory[0].blood_pressure.diastolic.value > 80 ? arrowUp : arrowDown} alt="" />
+                                <p className={classes.feedback}>{diagnosisHistory[0].blood_pressure.diastolic.value > 120 ? 'Higher Than Average' : 'Lower Than Average'}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                {/* health overview */}
+                <HealthOverview data={{ respiratoryRate: diagnosisHistory[0].respiratory_rate, heartRate: diagnosisHistory[0].heart_rate, temperature: diagnosisHistory[0].temperature }} />
             </div>
+            <div className={`${classes.list} card`}>
+                <p className={classes.header}>Diagnostic List</p>
+                <div className={`${classes.tableHeaders} flex-row`}>
+                    <div className={`${classes.diagnosis} flex-row`}>
+                        <p > Problem/Diagnosis </p>
+                    </div>
+                    <div className={`${classes.description} flex-row `}>
+                        <p > Description </p>
+                    </div>
+                    <div className={`${classes.status} flex-row `}>
+                        <p > Status </p>
+                    </div>
+                </div>
 
-            {/* health overview */}
-            <HealthOverview data={{ respiratoryRate: diagnosisHistory[0].respiratory_rate, heartRate: diagnosisHistory[0].heart_rate, temperature: diagnosisHistory[0].temperature }} />
+                {diagnosisList.map(item =>
+                    <div className={`${classes.tableRows} flex-row`}>
+                        <div className={`${classes.diagnosis} flex-row`}>
+                            <p > {item.name} </p>
+                        </div>
+                        <div className={`${classes.description} flex-row `}>
+                            <p > {item.description} </p>
+                        </div>
+                        <div className={`${classes.status} flex-row `}>
+                            <p > {item.status} </p>
+                        </div>
+                    </div>
+                )}
+
+            </div>
         </div>
+
     )
 }
 

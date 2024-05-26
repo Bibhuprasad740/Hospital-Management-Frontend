@@ -17,11 +17,10 @@ const SideBar = () => {
         <Patient data={DUMMY_DATA[0]}/>
         <Patient data={DUMMY_DATA[1]}/>
         <Patient data={DUMMY_DATA[2]}/> 
-        {/* <Patient data={DUMMY_DATA[3]}/> 
+         <Patient data={DUMMY_DATA[3]}/> 
         <Patient data={DUMMY_DATA[4]}/> 
         <Patient data={DUMMY_DATA[5]}/> 
         <Patient data={DUMMY_DATA[6]}/> 
-        <Patient data={DUMMY_DATA[7]}/>  */}
       </div>
     </div>
   )
