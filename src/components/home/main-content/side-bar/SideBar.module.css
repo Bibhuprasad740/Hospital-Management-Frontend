@@ -1,4 +1,20 @@
 .sideBar{
     /* background-color: red; */
     width: 20%;
+    min-height: 84vh;
+}
+
+.sideBarHeading{
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sideBarHeading p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sideBarHeading img{
+    height: 2vh;
+    cursor: pointer;
 }

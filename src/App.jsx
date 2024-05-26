@@ -2,7 +2,7 @@ import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Home from './components/home/Home'
 import './App.css'
 import DefaultPage from './components/DefaultPage'
-import PatientDetailsPage from './components/home/main-content/patient-details/PatientDetailsPage'
+import PatientDetails from './components/home/main-content/patient-details/PatientDetails'
 
 const router = createBrowserRouter([
   {
@@ -11,11 +11,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <DefaultPage />
+        element: <PatientDetails />
       },
       {
         path: ":patientId",
-        element: <PatientDetailsPage />
+        element: <PatientDetails />
       }
     ]
   }

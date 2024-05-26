@@ -1,0 +1,23 @@
+.patient{
+    padding: 15px 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.patient:hover{
+    background-color: var(--accent-color-4);
+}
+
+.patient img{
+    height: 5vh;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.details {
+    color: var(--accent-color-2);
+    font-size: 12px;
+}

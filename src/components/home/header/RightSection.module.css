@@ -35,3 +35,7 @@
     width: auto;
 }
 
+.doctorPng, .doctorDetails, .settings, .moreVert {
+    cursor: pointer;
+}
+
