@@ -1,10 +1,13 @@
-.rightSection{
+/* Base styles for larger screens (desktops) */
+.rightSection {
     width: 29%;
     height: 100%;
 }
 
 .details {
     height: 100%;
+    display: flex; /* Ensure flexbox layout */
+    flex-direction: column; /* Stack children vertically */
 }
 
 .profilePicture {
@@ -56,7 +59,7 @@
     cursor: pointer;
 }
 
-.labResults{
+.labResults {
     margin: 20px 0;
     padding: 20px;
 }
@@ -74,11 +77,111 @@
     overflow-y: scroll;
 }
 
-.resultElement{
+.resultElement {
     justify-content: space-between;
     padding: 20px;
 }
 
 .resultElement:hover {
     background-color: var(--hover-color);
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .rightSection {
+        width: 100%; /* Full width for right section on tablets */
+        height: auto; /* Adjust height for tablets */
+    }
+
+    .profilePicture {
+        padding: 20px 0; /* Reduce padding for tablets */
+    }
+
+    .profilePicture img {
+        height: 15vh; /* Reduce image height for tablets */
+    }
+
+    .name {
+        font-size: 22px; /* Reduce font size for tablets */
+    }
+
+    .info {
+        padding: 15px; /* Reduce padding for tablets */
+        height: auto; /* Adjust height for tablets */
+    }
+
+    .info p {
+        font-size: 11px; /* Reduce font size for tablets */
+    }
+
+    .showAll button {
+        width: 80%; /* Adjust button width for tablets */
+    }
+
+    .labResults {
+        margin: 15px 0; /* Adjust margin for tablets */
+        padding: 15px; /* Reduce padding for tablets */
+    }
+
+    .header {
+        font-size: 22px; /* Reduce font size for tablets */
+    }
+
+    .resultsList {
+        max-height: 400px; /* Adjust max-height for tablets */
+    }
+
+    .resultElement {
+        padding: 15px; /* Reduce padding for result elements on tablets */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .rightSection {
+        width: 100%; /* Full width for right section on mobile */
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .profilePicture {
+        padding: 15px 0; /* Further reduce padding for mobile */
+    }
+
+    .profilePicture img {
+        height: 10vh; /* Further reduce image height for mobile */
+    }
+
+    .name {
+        font-size: 20px; /* Further reduce font size for mobile */
+    }
+
+    .info {
+        padding: 10px; /* Further reduce padding for mobile */
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .info p {
+        font-size: 10px; /* Further reduce font size for mobile */
+    }
+
+    .showAll button {
+        width: 90%; /* Adjust button width for mobile */
+    }
+
+    .labResults {
+        margin: 10px 0; /* Further adjust margin for mobile */
+        padding: 10px; /* Further reduce padding for mobile */
+    }
+
+    .header {
+        font-size: 20px; /* Further reduce font size for mobile */
+    }
+
+    .resultsList {
+        max-height: 300px; /* Further adjust max-height for mobile */
+    }
+
+    .resultElement {
+        padding: 10px; /* Further reduce padding for result elements on mobile */
+    }
 }

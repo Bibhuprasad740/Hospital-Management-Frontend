@@ -1,9 +1,9 @@
+/* Base styles for larger screens (desktops) */
 .healthOverview {
     height: 40%;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 20px;
-    /* background-color: red; */
 }
 
 .container {
@@ -19,11 +19,11 @@
     margin-bottom: 10px;
 }
 
-.container p{
+.container p {
     margin: 5px 0;
 }
 
-.title{
+.title {
     font-size: 14px;
     font-weight: bold;
 }
@@ -33,10 +33,65 @@
     font-size: 30px;
 }
 
-.status{
+.status {
     font-size: 14px;
 }
 
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .healthOverview {
+        flex-direction: column; /* Stack overview items vertically on tablets */
+        height: auto; /* Adjust height for tablets */
+        margin-bottom: 15px; /* Reduce bottom margin for tablets */
+    }
+
+    .container {
+        width: 100%; /* Full width for container items on tablets */
+        padding: 15px; /* Reduce padding for tablets */
+        margin-bottom: 15px; /* Add bottom margin between container items */
+    }
+
+    .container img {
+        height: 12vh; /* Reduce image height for tablets */
+    }
+
+    .title, .status {
+        font-size: 12px; /* Reduce font size for titles and status on tablets */
+    }
+
+    .value {
+        font-size: 25px; /* Reduce font size for values on tablets */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .healthOverview {
+        flex-direction: column; /* Stack overview items vertically on mobile */
+        height: auto; /* Adjust height for mobile */
+        margin-bottom: 10px; /* Further reduce bottom margin for mobile */
+    }
+
+    .container {
+        width: 100%; /* Full width for container items on mobile */
+        padding: 10px; /* Further reduce padding for mobile */
+        margin-bottom: 10px; /* Add bottom margin between container items */
+    }
+
+    .container img {
+        height: 10vh; /* Further reduce image height for mobile */
+    }
+
+    .title, .status {
+        font-size: 10px; /* Further reduce font size for titles and status on mobile */
+    }
+
+    .value {
+        font-size: 20px; /* Further reduce font size for values on mobile */
+    }
+}
+
+/* Specific background color classes */
 .one {
     background-color: var(--respiratory-rate-background);
 }

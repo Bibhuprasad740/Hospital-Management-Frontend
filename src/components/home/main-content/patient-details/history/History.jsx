@@ -113,7 +113,7 @@ const History = () => {
                 <p className={classes.header}>Diagnostic List</p>
                 <div className={`${classes.tableHeaders} flex-row`}>
                     <div className={`${classes.diagnosis} flex-row`}>
-                        <p > Problem/Diagnosis </p>
+                        <p > Problem </p>
                     </div>
                     <div className={`${classes.description} flex-row `}>
                         <p > Description </p>
