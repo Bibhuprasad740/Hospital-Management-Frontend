@@ -1,19 +1,47 @@
-.sideBar{
-    /* background-color: red; */
+/* Base styles for larger screens (desktops) */
+.sideBar {
+    padding: 20px;
     width: 20%;
 }
 
-.sideBarHeading{
+.sideBarHeading {
     justify-content: space-between;
-    padding: 20px;
 }
 
-.sideBarHeading p{
+.sideBarHeading p {
     font-weight: bold;
     font-size: 20px;
 }
 
-.sideBarHeading img{
+.sideBarHeading img {
     height: 2vh;
     cursor: pointer;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .sideBar {
+        width: 30%; /* Increase width for better visibility on tablets */
+    }
+
+    .sideBarHeading p {
+        font-size: 18px; /* Slightly reduce font size for tablets */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .sideBar {
+        padding: 0;
+        width: 100%; /* Make the sidebar full width on mobile devices */
+    }
+
+    .sideBarHeading {
+        padding: 20px;
+    }
+
+    .sideBarHeading p {
+        font-size: 20px; /* Further reduce font size for mobile devices */
+        margin-bottom: 10px; /* Add margin to separate the text from the image */
+    }
 }

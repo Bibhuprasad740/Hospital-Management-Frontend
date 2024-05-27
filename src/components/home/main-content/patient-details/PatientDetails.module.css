@@ -1,7 +1,28 @@
-.patientDetails{
+/* Base styles for larger screens (desktops) */
+.patientDetails {
     width: 79%;
     height: 84vh;
     border-radius: 10px;
     justify-content: space-between;
-    /* background-color: red; */
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .patientDetails {
+        width: 90%; /* Increase width for better visibility on tablets */
+        height: 80vh; /* Adjust height for tablets */
+        border-radius: 8px; /* Slightly reduce border radius for tablets */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .patientDetails {
+        width: 100%; /* Full width on mobile devices */
+        height: auto; /* Let height adjust automatically */
+        border-radius: 5px; /* Further reduce border radius for mobile devices */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center content vertically */
+        padding: 20px 0; /* Add padding for better spacing on small screens */
+    }
 }

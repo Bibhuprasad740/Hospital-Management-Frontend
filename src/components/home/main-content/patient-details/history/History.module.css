@@ -1,3 +1,4 @@
+/* Base styles for larger screens (desktops) */
 .historyPage {
     width: 69%;
     height: 100%;
@@ -12,12 +13,12 @@
     font-size: 25px;
 }
 
-.chart{
+.chart {
     background-color: var(--graph-background);
     margin: 20px 0;
     border-radius: 10px;
     height: 50%;
-
+    justify-content: space-between;
 }
 
 .lineGraph {
@@ -25,18 +26,17 @@
     width: 70%;
     height: 100%;
     cursor: pointer;
-    /* border: 1px solid red; */
 }
 
 .graphDetails {
     width: 30%;
     height: 100%;
-    /* background-color: red; */
 }
 
 .dataElement {
     margin: 20px 0;
     height: 30%;
+    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -49,11 +49,11 @@
     font-size: 14px;
 }
 
-.detailsHeader{
+.detailsHeader {
     gap: 10px;
 }
 
-.detailsHeader p{
+.detailsHeader p {
     font-weight: bold;
 }
 
@@ -82,7 +82,6 @@
 }
 
 /* ============LIST============== */
-
 .list {
     width: 100%;
     margin: 20px 0;
@@ -97,7 +96,7 @@
     padding: 20px;
 }
 
-.tableHeaders p{
+.tableHeaders p {
     font-weight: bold;
 }
 
@@ -118,3 +117,108 @@
     padding: 20px;
 }
 
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .historyPage {
+        width: 90%; /* Increase width for better visibility on tablets */
+    }
+
+    .header {
+        font-size: 22px; /* Reduce font size for tablets */
+    }
+
+    .chart {
+        flex-direction: column; /* Stack chart and details vertically on tablets */
+    }
+
+    .lineGraph {
+        width: 100%; /* Full width for line graph on tablets */
+        padding: 15px; /* Reduce padding for tablets */
+    }
+
+    .graphDetails {
+        width: 100%; /* Full width for graph details on tablets */
+        padding: 15px; /* Add padding for better spacing */
+    }
+
+    .dataElement {
+        margin: 15px 0; /* Adjust margin for tablets */
+        height: auto; /* Let height adjust automatically */
+    }
+
+    .feedback {
+        font-size: 12px; /* Reduce font size for tablets */
+    }
+
+    .value {
+        font-size: 18px; /* Reduce font size for values on tablets */
+    }
+
+    .list {
+        padding: 15px; /* Reduce padding for tablets */
+    }
+
+    .tableHeaders {
+        padding: 15px; /* Reduce padding for tablets */
+    }
+
+    .tableRows {
+        padding: 15px; /* Reduce padding for table rows on tablets */
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .historyPage {
+        width: 100%; /* Full width on mobile devices */
+    }
+
+    .header {
+        font-size: 20px; /* Further reduce font size for mobile */
+    }
+
+    .chart {
+        flex-direction: column; /* Stack chart and details vertically on mobile */
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .lineGraph {
+        width: 100%; /* Full width for line graph on mobile */
+        height: 30vh;
+        padding: 10px; /* Further reduce padding for mobile */
+    }
+
+    .graphDetails {
+        width: 100%; /* Full width for graph details on mobile */
+        padding: 10px; /* Further reduce padding for mobile */
+    }
+
+    .dataElement {
+        margin: 10px 0; /* Further adjust margin for mobile */
+        height: auto; /* Let height adjust automatically */
+    }
+
+    .feedback {
+        font-size: 10px; /* Further reduce font size for mobile */
+    }
+
+    .value {
+        font-size: 16px; /* Further reduce font size for values on mobile */
+    }
+
+    .list {
+        padding: 10px; /* Further reduce padding for mobile */
+    }
+
+    .tableHeaders {
+        padding: 10px; /* Further reduce padding for mobile */
+    }
+
+    .tableRows {
+        padding: 10px; /* Further reduce padding for table rows on mobile */
+    }
+
+    .divider {
+        width: 100%;
+    }
+}
