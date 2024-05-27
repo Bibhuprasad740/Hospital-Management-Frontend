@@ -1,0 +1,20 @@
+.defaultPage{
+    width: 79%;
+    height: 80vh;
+    padding: 20px;
+}
+
+.mainContent {
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContent img{
+    height: auto;
+    width: 40%;
+}
+
+.mainContent p {
+    font-weight: bold;
+    color: var(--accent-color-2);
+}
