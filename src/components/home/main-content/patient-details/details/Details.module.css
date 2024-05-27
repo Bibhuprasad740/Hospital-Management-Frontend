@@ -73,13 +73,17 @@
     margin: 20px 0;
     cursor: pointer;
     border-radius: 5px;
-    max-height: 500px;
+    max-height: 300px;
     overflow-y: scroll;
 }
 
 .resultElement {
     justify-content: space-between;
     padding: 20px;
+}
+
+.resultElement p{
+    font-size: 14px;
 }
 
 .resultElement:hover {

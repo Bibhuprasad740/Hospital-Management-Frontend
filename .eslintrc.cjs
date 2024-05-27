@@ -14,7 +14,7 @@ module.exports = {
   rules: {
     'react/jsx-no-target-blank': 'off',
     "rules": {
-      "react/prop-types": false
+      "react/prop-types": true
     },
     'react-refresh/only-export-components': [
       'warn',

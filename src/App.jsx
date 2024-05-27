@@ -1,8 +1,9 @@
 import {RouterProvider, createBrowserRouter} from 'react-router-dom'
 import Home from './components/home/Home'
 import './App.css'
-import DefaultPage from './components/DefaultPage'
 import PatientDetails from './components/home/main-content/patient-details/PatientDetails'
+import DefaultPage from './components/home/main-content/patient-details/DefaultPage'
+import { protection } from './utils/util'
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,8 @@ const router = createBrowserRouter([
       },
       {
         path: ":patientId",
-        element: <PatientDetails />
+        element: <PatientDetails />,
+        loader: protection
       }
     ]
   }

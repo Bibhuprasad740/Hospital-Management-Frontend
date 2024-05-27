@@ -4,8 +4,8 @@ import { Line } from 'react-chartjs-2'
 import { Chart, registerables, defaults } from 'chart.js'
 import arrowUp from '../../../../../assets/arrowUp.png'
 import arrowDown from '../../../../../assets/arrowDown.png'
-import { DUMMY_DATA } from '../../../../../dummyData'
 import HealthOverview from './HealthOverview'
+import { getSelectedPatientFromLocalStorage } from '../../../../../utils/util'
 
 Chart.register(...registerables);
 defaults.maintainAspectRatio = false;
@@ -16,7 +16,8 @@ defaults.plugins.title.font.size = 20;
 defaults.plugins.title.font.color = 'black';
 
 const History = () => {
-    const diagnosisHistory = DUMMY_DATA[0].diagnosis_history;
+    const patient = getSelectedPatientFromLocalStorage();
+    const diagnosisHistory = patient.diagnosis_history;
     const labels = [];
     for (let i = 0; i < Math.min(diagnosisHistory.length, 6); i++) {
         let labelName = ''
@@ -63,7 +64,7 @@ const History = () => {
         }
     }
 
-    const diagnosisList = DUMMY_DATA[0].diagnostic_list;
+    const diagnosisList = patient.diagnostic_list;
     return (
         <div className={`${classes.historyPage} flex-col`}>
             <div className={`${classes.history} card`}>

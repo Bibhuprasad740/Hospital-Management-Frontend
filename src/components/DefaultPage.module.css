@@ -1,9 +1,0 @@
-.defaultPage {
-
-}
-
-@media (max-width: 768px) {
-    .defaultPage{
-        display: none;
-    }
-}

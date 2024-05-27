@@ -6,11 +6,11 @@ import maleIcon from '../../../../../assets/MaleIcon.svg'
 import phoneIcon from '../../../../../assets/PhoneIcon.svg'
 import insuranceIcon from '../../../../../assets/InsuranceIcon.svg'
 import download from '../../../../../assets/download.svg'
-import { DUMMY_DATA } from '../../../../../dummyData'
+import { getSelectedPatientFromLocalStorage } from '../../../../../utils/util'
 
 const Details = () => {
-    const patientDetails = DUMMY_DATA[0];
-    const labResultsList = DUMMY_DATA[0].lab_results;
+    const patientDetails = getSelectedPatientFromLocalStorage();
+    const labResultsList = patientDetails.lab_results;
 
     function formatDate(dateString) {
         // Create a Date object from the input string
