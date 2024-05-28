@@ -12,6 +12,7 @@
 .logo {
     width: 10%;
     height: auto;
+    cursor: pointer;
 }
 
 .navBar {
@@ -30,12 +31,16 @@
     transition: all 0.3s ease-in;
 }
 
-.navElement:hover {
+.navElement:hover, .navElement.active {
     background-color: var(--accent-color-3);
 }
 
 .navElement img {
     height: 1.5vh;
+}
+
+.navElement p{
+    font-weight: bold;
 }
 
 /* Medium screens (tablets) */

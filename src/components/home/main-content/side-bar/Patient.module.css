@@ -5,7 +5,7 @@
     cursor: pointer;
 }
 
-.patient:hover {
+.patient:hover, .patient.active {
     background-color: var(--accent-color-4);
 }
 

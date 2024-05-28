@@ -13,8 +13,9 @@ const Patient = ({ data }) => {
     dispatch(patientsActions.setIsChanged());
     navigate(`/${data.name}`);
   }
+
   return (
-    <div onClick={patientClickHandler} className={`${classes.patient} flex-row`}>
+    <div onClick={patientClickHandler} className={`${classes.patient} flex-row `}>
       <img src={data.profile_picture} alt="" />
       <div>
         <p className={classes.name}>{data.name}</p>
